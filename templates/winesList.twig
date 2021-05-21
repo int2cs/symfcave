@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<h1>Liste des vins !</h1>
+
+	<div class="block d-flex flex-row justify-content-around flex-wrap align-content-start">
+		{% for product in products %}
+			<div class="card winecard mb-3 mx-2" id="id{{product.id}}">
+				<h3 class="card-header cardTitle">{{product.name}}</h3>
+				<div class="card-body">
+					<h5 class="card-title cardCountry">{{product.country}}</h5>
+					<h6 class="card-subtitle text-muted cardRegion">{{product.region}}</h6>
+				</div>
+				<img class="cardPicture" src="{{asset('assets/img/uploads/')}}{{product.picture}}" alt="Photo de {{product.name}}"/>
+
+				<div class="card-body">
+					<p class="card-text cardDescription">{{product.description}}</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Millésime :
+						<span class="text-info cardMillesime">{{product.millesime}}</span>
+					</li>
+					<li class="list-group-item">Cépages :
+						<span class="text-muted cardCepages">{{product.cepages}}</span>
+					</li>
+				</ul>
+
+				{% if connected %}
+					<div class="card-body">
+						<button class="card-link btn btn-outline-warning" data-id="{{product.id}}" id="btnEdit" data-toggle="modal" data-target="#modalEditWine" onclick="editBottle({{product.id}})">
+							Editer
+						</button>
+						<button class="card-link btn btn-outline-danger" data-id="{{product.id}}" id="btnDelete" data-toggle="modal" data-target="#modalDeleteWine" onclick="deleteBottle({{product.id}})">
+							Supprimer
+						</button>
+					</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
