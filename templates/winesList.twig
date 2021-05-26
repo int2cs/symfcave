@@ -1,12 +1,19 @@
 {% extends "base.html.twig" %}
 
+{% block title %}MyCave - Liste de nos vins
+{% endblock %}
+
 {% block body %}
 	<h1>Liste des vins !</h1>
 
 	<div class="block d-flex flex-row justify-content-around flex-wrap align-content-start">
 		{% for product in products %}
-			<div class="card winecard mb-3 mx-2" id="id{{product.id}}">
-				<h3 class="card-header cardTitle">{{product.name}}</h3>
+			<div class="card winecard mb-3 mx-2">
+				<a href="{{path('show_one', {'id': product.id })}}">
+
+					<h3 class="card-header cardTitle">{{product.name}}</h3>
+				</a>
+
 				<div class="card-body">
 					<h5 class="card-title cardCountry">{{product.country}}</h5>
 					<h6 class="card-subtitle text-muted cardRegion">{{product.region}}</h6>
@@ -25,14 +32,14 @@
 					</li>
 				</ul>
 
-				{% if connected %}
+				{% if app.user %}
 					<div class="card-body">
-						<button class="card-link btn btn-outline-warning" data-id="{{product.id}}" id="btnEdit" data-toggle="modal" data-target="#modalEditWine" onclick="editBottle({{product.id}})">
+						<a href="{{path('wine_edit', {'id': product.id})}}" class="card-link btn btn-outline-warning">
 							Editer
-						</button>
-						<button class="card-link btn btn-outline-danger" data-id="{{product.id}}" id="btnDelete" data-toggle="modal" data-target="#modalDeleteWine" onclick="deleteBottle({{product.id}})">
+						</a>
+						<a href="{{path('wine_delete', {'id': product.id})}}" class="card-link btn btn-outline-danger">
 							Supprimer
-						</button>
+						</a>
 					</div>
 				{% endif %}
 			</div>

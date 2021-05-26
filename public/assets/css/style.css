@@ -1,5 +1,6 @@
 body {
   padding-top: 72px;
+  min-height: 100vh;
 }
 main {
   max-width: 1200px;
@@ -12,6 +13,10 @@ main {
 .block {
   max-width: 1500px;
   margin: auto;
+}
+.card {
+  border-radius: 30px;
+  overflow: hidden;
 }
 .winecard {
   width: 300px;
@@ -39,4 +44,15 @@ main {
 }
 .winecard > .list-group .list-group-item {
   padding: 0 1.25rem;
+}
+.showOne {
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.showOne img {
+  float: left;
+  margin-right: 50px;
+  border-radius: 50px;
 }

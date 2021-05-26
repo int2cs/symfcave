@@ -4,11 +4,12 @@ namespace App\Entity;
 
 use App\Repository\UsersRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @ORM\Id
@@ -30,7 +31,7 @@ class Users
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $nickname;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -40,7 +41,7 @@ class Users
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $pwd;
+    private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -76,14 +77,14 @@ class Users
         return $this;
     }
 
-    public function getNickname(): ?string
+    public function getUsername(): ?string
     {
-        return $this->nickname;
+        return $this->username;
     }
 
-    public function setNickname(?string $nickname): self
+    public function setUsername(?string $username): self
     {
-        $this->nickname = $nickname;
+        $this->username = $username;
 
         return $this;
     }
@@ -100,14 +101,14 @@ class Users
         return $this;
     }
 
-    public function getPwd(): ?string
+    public function getPassword(): ?string
     {
-        return $this->pwd;
+        return $this->password;
     }
 
-    public function setPwd(string $pwd): self
+    public function setPassword(string $password): self
     {
-        $this->pwd = $pwd;
+        $this->password = $password;
 
         return $this;
     }
@@ -122,5 +123,16 @@ class Users
         $this->token = $token;
 
         return $this;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+    public function getSalt()
+    {
+    }
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
     }
 }

@@ -1,0 +1,57 @@
+"filename", "language", "HTML (Twig)", "PHP", "CSS", "YAML", "JSON", "JavaScript", "comment", "blank", "total"
+"c:\wamp64\www\symfcave\composer.json", "JSON", 0, 0, 0, 0, 99, 0, 0, 1, 100
+"c:\wamp64\www\symfcave\composer.lock", "JSON", 0, 0, 0, 0, 8132, 0, 0, 1, 8133
+"c:\wamp64\www\symfcave\config\bundles.php", "PHP", 0, 14, 0, 0, 0, 0, 0, 2, 16
+"c:\wamp64\www\symfcave\config\packages\cache.yaml", "YAML", 0, 0, 0, 2, 0, 0, 13, 5, 20
+"c:\wamp64\www\symfcave\config\packages\dev\debug.yaml", "YAML", 0, 0, 0, 2, 0, 0, 2, 1, 5
+"c:\wamp64\www\symfcave\config\packages\dev\monolog.yaml", "YAML", 0, 0, 0, 11, 0, 0, 8, 1, 20
+"c:\wamp64\www\symfcave\config\packages\dev\web_profiler.yaml", "YAML", 0, 0, 0, 5, 0, 0, 0, 2, 7
+"c:\wamp64\www\symfcave\config\packages\doctrine.yaml", "YAML", 0, 0, 0, 14, 0, 0, 3, 2, 19
+"c:\wamp64\www\symfcave\config\packages\doctrine_migrations.yaml", "YAML", 0, 0, 0, 4, 0, 0, 2, 1, 7
+"c:\wamp64\www\symfcave\config\packages\framework.yaml", "YAML", 0, 0, 0, 8, 0, 0, 7, 3, 18
+"c:\wamp64\www\symfcave\config\packages\mailer.yaml", "YAML", 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\wamp64\www\symfcave\config\packages\notifier.yaml", "YAML", 0, 0, 0, 9, 0, 0, 7, 1, 17
+"c:\wamp64\www\symfcave\config\packages\prod\deprecations.yaml", "YAML", 0, 0, 0, 0, 0, 0, 8, 1, 9
+"c:\wamp64\www\symfcave\config\packages\prod\doctrine.yaml", "YAML", 0, 0, 0, 19, 0, 0, 0, 2, 21
+"c:\wamp64\www\symfcave\config\packages\prod\monolog.yaml", "YAML", 0, 0, 0, 17, 0, 0, 0, 1, 18
+"c:\wamp64\www\symfcave\config\packages\prod\routing.yaml", "YAML", 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\wamp64\www\symfcave\config\packages\routing.yaml", "YAML", 0, 0, 0, 3, 0, 0, 3, 2, 8
+"c:\wamp64\www\symfcave\config\packages\security.yaml", "YAML", 0, 0, 0, 25, 0, 0, 9, 4, 38
+"c:\wamp64\www\symfcave\config\packages\sensio_framework_extra.yaml", "YAML", 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\wamp64\www\symfcave\config\packages\test\doctrine.yaml", "YAML", 0, 0, 0, 3, 0, 0, 1, 1, 5
+"c:\wamp64\www\symfcave\config\packages\test\framework.yaml", "YAML", 0, 0, 0, 4, 0, 0, 0, 1, 5
+"c:\wamp64\www\symfcave\config\packages\test\monolog.yaml", "YAML", 0, 0, 0, 12, 0, 0, 0, 1, 13
+"c:\wamp64\www\symfcave\config\packages\test\twig.yaml", "YAML", 0, 0, 0, 2, 0, 0, 0, 1, 3
+"c:\wamp64\www\symfcave\config\packages\test\validator.yaml", "YAML", 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\wamp64\www\symfcave\config\packages\test\web_profiler.yaml", "YAML", 0, 0, 0, 5, 0, 0, 0, 2, 7
+"c:\wamp64\www\symfcave\config\packages\translation.yaml", "YAML", 0, 0, 0, 6, 0, 0, 0, 1, 7
+"c:\wamp64\www\symfcave\config\packages\twig.yaml", "YAML", 0, 0, 0, 2, 0, 0, 0, 1, 3
+"c:\wamp64\www\symfcave\config\packages\validator.yaml", "YAML", 0, 0, 0, 3, 0, 0, 4, 2, 9
+"c:\wamp64\www\symfcave\config\preload.php", "PHP", 0, 4, 0, 0, 0, 0, 0, 2, 6
+"c:\wamp64\www\symfcave\config\routes.yaml", "YAML", 0, 0, 0, 0, 0, 0, 3, 1, 4
+"c:\wamp64\www\symfcave\config\routes\annotations.yaml", "YAML", 0, 0, 0, 6, 0, 0, 0, 2, 8
+"c:\wamp64\www\symfcave\config\routes\dev\framework.yaml", "YAML", 0, 0, 0, 3, 0, 0, 0, 1, 4
+"c:\wamp64\www\symfcave\config\routes\dev\web_profiler.yaml", "YAML", 0, 0, 0, 6, 0, 0, 0, 2, 8
+"c:\wamp64\www\symfcave\config\services.yaml", "YAML", 0, 0, 0, 15, 0, 0, 11, 6, 32
+"c:\wamp64\www\symfcave\migrations\Version20210520143321.php", "PHP", 0, 20, 0, 0, 0, 0, 5, 7, 32
+"c:\wamp64\www\symfcave\migrations\Version20210525141538.php", "PHP", 0, 20, 0, 0, 0, 0, 5, 7, 32
+"c:\wamp64\www\symfcave\public\assets\css\bootstrap.min.css", "CSS", 0, 0, 2, 0, 0, 0, 10, 0, 12
+"c:\wamp64\www\symfcave\public\assets\css\style.css", "CSS", 0, 0, 57, 0, 0, 0, 0, 2, 59
+"c:\wamp64\www\symfcave\public\assets\js\jquery.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 1, 0, 2
+"c:\wamp64\www\symfcave\public\index.php", "PHP", 0, 16, 0, 0, 0, 0, 0, 7, 23
+"c:\wamp64\www\symfcave\src\Controller\AuthController.php", "PHP", 0, 15, 0, 0, 0, 0, 6, 5, 26
+"c:\wamp64\www\symfcave\src\Controller\HomeController.php", "PHP", 0, 14, 0, 0, 0, 0, 3, 6, 23
+"c:\wamp64\www\symfcave\src\Controller\WinesController.php", "PHP", 0, 52, 0, 0, 0, 0, 27, 24, 103
+"c:\wamp64\www\symfcave\src\Entity\Users.php", "PHP", 0, 83, 0, 0, 0, 0, 26, 30, 139
+"c:\wamp64\www\symfcave\src\Entity\Wines.php", "PHP", 0, 82, 0, 0, 0, 0, 29, 33, 144
+"c:\wamp64\www\symfcave\src\Kernel.php", "PHP", 0, 12, 0, 0, 0, 0, 23, 4, 39
+"c:\wamp64\www\symfcave\src\Repository\UsersRepository.php", "PHP", 0, 12, 0, 0, 0, 0, 33, 6, 51
+"c:\wamp64\www\symfcave\src\Repository\WinesRepository.php", "PHP", 0, 12, 0, 0, 0, 0, 33, 6, 51
+"c:\wamp64\www\symfcave\templates\auth\login.twig", "HTML (Twig)", 4, 0, 0, 0, 0, 0, 0, 3, 7
+"c:\wamp64\www\symfcave\templates\base.html.twig", "HTML (Twig)", 114, 0, 0, 0, 0, 0, 22, 17, 153
+"c:\wamp64\www\symfcave\templates\home.twig", "HTML (Twig)", 4, 0, 0, 0, 0, 0, 0, 2, 6
+"c:\wamp64\www\symfcave\templates\wineEdit.twig", "HTML (Twig)", 9, 0, 0, 0, 0, 0, 0, 2, 11
+"c:\wamp64\www\symfcave\templates\wineShow.twig", "HTML (Twig)", 22, 0, 0, 0, 0, 0, 0, 3, 25
+"c:\wamp64\www\symfcave\templates\winesList.twig", "HTML (Twig)", 41, 0, 0, 0, 0, 0, 0, 8, 49
+"c:\wamp64\www\symfcave\tests\bootstrap.php", "PHP", 0, 8, 0, 0, 0, 0, 0, 4, 12
+"Total", "-", 194, 364, 59, 198, 8231, 1, 304, 234, 9585

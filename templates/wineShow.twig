@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}MyCave -
+	{{product.name}}
+{% endblock %}
+{% block body %}
+	<section class="showOne">
+		<img class="cardPicture" src="{{asset('assets/img/uploads/')}}{{product.picture}}" alt="Photo de {{product.name}}"/>
+		<h2>{{product.name}}</h2>
+		<h4>{{product.country}}
+			:
+			{{product.region}}</h4>
+		<h5>Millésime :
+			{{product.millesime}}</h5>
+		<h4>Cépages :
+			{{product.cepages}}</h4>
+		<h4>{{product.description}}</h4>
+	</section>
+
+	{% if app.user %}
+		<a href="/wines/edit/{{product.id}}" class="btn btn-outline-warning">Editer</a>
+		<a href="/wines/delete/{{product.id}}" class="btn btn-outline-danger">Supprimer</a>
+	{% endif %}
+
+{% endblock %}

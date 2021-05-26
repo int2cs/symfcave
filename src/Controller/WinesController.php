@@ -15,22 +15,32 @@ class WinesController extends AbstractController
   /**
    * @Route("/wines/list", name="wines_list")
    */
-  public function list(): Response
+  public function list()
   {
     $products = $this->getDoctrine()->getRepository(Wines::class)->findAll();
-    // dd($products);
 
     return $this->render('winesList.twig', [
-      'connected' => true,
       'products' => $products
     ]);
+  }
+
+  /**
+   * @Route("/show/{id}", name="show_one")
+   */
+  public function showOne(Wines $product)
+  {
+    // $product = $this->getDoctrine()->getRepository(Wines::class)->find($product)
+
+    return $this->render('wineShow.twig', [
+      'product' => $product
+      ]);
   }
 
 
   /**
    * @Route("/wines/add", name="wines_add")
    */
-  public function add(Request $data): Response
+  public function add(Request $data)
   {
     $entityManager = $this->getDoctrine()->getManager();
 
@@ -60,15 +70,33 @@ class WinesController extends AbstractController
     $entityManager->persist($product);
     $entityManager->flush();
 
-    return new Response('Entrée sauvegardé !');
+    $this->addFlash('success', 'Ajout effectué avec succès ');
+
+    return $this->redirectToRoute('wines_list');
   }
 
-  // public function list($id = 1): Response
-  // {
-  //   $product = $this->getDoctrine()->getRepository(Wines::class)->find($id);
-  //   return $this->render('winesList.twig', [
-  //     'connected' => true,
-  //     'name' => $product->getName()
-  //   ]);
-  // }
+  /**
+   * @Route("/wines/edit/{id}", name="wine_edit")
+   */
+  public function edit(Wines $product)
+  {
+    $this->addFlash('success', 'Modification effectué avec succès');
+
+    return new Response('Editing Bottle');
+  }
+
+  /**
+   * @Route("/wines/delete/{id}", name="wine_delete")
+   */
+  public function delete(Wines $product)
+  {
+    $entityManager = $this->getDoctrine()->getManager();
+
+    $entityManager->remove($product);
+    $entityManager->flush();
+
+    $this->addFlash('success', 'Article supprimé avec succès!');
+
+    return $this->redirectToRoute('wines_list');
+  }
 }

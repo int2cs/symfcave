@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<pre>
+    {{ dump(formEdit.vars.data) }}
+  </pre>
+	{{ form_start(formEdit) }}
+	{{form_row(formEdit.vars.data.name)}}
+	{{form_end(formEdit)}}
+{% endblock %}
