@@ -37,9 +37,11 @@
 						<a id="btnEditWine" data-toggle="modal" data-target="#modalEditWine" data-id="{{product.id}}" class="card-link btn btn-outline-warning">
 							Editer
 						</a>
+						{% if is_granted('ROLE_ADMIN') %}
 						<a href="{{path('wine_delete', {'id': product.id})}}" class="card-link btn btn-outline-danger">
 							Supprimer
 						</a>
+						{% endif %}
 					</div>
 				{% endif %}
 			</div>

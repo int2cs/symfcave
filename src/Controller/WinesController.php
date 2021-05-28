@@ -14,7 +14,7 @@ class WinesController extends AbstractController
 {
 
   /**
-   * @Route("/wines/list", name="wines_list")
+   * @Route("/", name="wines_list")
    */
   public function list()
   {
@@ -39,7 +39,7 @@ class WinesController extends AbstractController
 
 
   /**
-   * @Route("/wines/add", name="wines_add")
+   * @Route("/admin/wine/add", name="wines_add")
    */
   public function add(Request $data)
   {
@@ -77,14 +77,14 @@ class WinesController extends AbstractController
   }
 
   /**
-   * @Route("/wines/get/{id}", name="wine_get_info")
+   * @Route("/admin/wine/get/{id}", name="wine_get_info")
    */
   public function getInfo(Wines $product)
   {
     return $this->json($product, 200);
   }
   /**
-   * @Route("/wines/edit/{id}", name="wine_edit")
+   * @Route("/admin/wine/edit/{id}", name="wine_edit")
    */
   public function edit(Wines $product, Request $request)
   {
@@ -102,11 +102,11 @@ class WinesController extends AbstractController
     $entityManager->flush();
 
     $this->addFlash('success', 'Mise à jour éffectué avec succès.');
-    return $this->redirectToRoute('home');
+    return $this->redirectToRoute('wines_list');
   }
 
   /**
-   * @Route("/wines/delete/{id}", name="wine_delete")
+   * @Route("/admin/wine/delete/{id}", name="wine_delete")
    */
   public function delete(Wines $product)
   {

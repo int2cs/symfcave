@@ -8,7 +8,6 @@ btnsEdit.forEach((elem) => {
       if (xhr.readyState == XMLHttpRequest.DONE) {
         if (xhr.status == 200) {
           const res = JSON.parse(xhr.response);
-          console.log(res);
 
           const form = document.querySelector("#modalEditWine form");
           const name = document.querySelector("#modalEditWine form #name");
@@ -32,7 +31,7 @@ btnsEdit.forEach((elem) => {
           millesime.value = res.millesime;
           cepages.value = res.cepages;
           description.value = res.description;
-
+          //
           //On modifie l'attribut action du formulaire d'edition pour injecter l'id de la bouteille séléctionné
           let splitAction = form.getAttribute("action").split("/");
           splitAction[splitAction.length - 1] = elem.dataset.id;
@@ -44,7 +43,7 @@ btnsEdit.forEach((elem) => {
 
     let dataSend = new FormData();
     dataSend.append("idBottle", elem.dataset.id);
-    xhr.open("post", `/wines/get/${elem.dataset.id}`, true);
+    xhr.open("post", `/admin/wine/get/${elem.dataset.id}`, true);
     xhr.send(dataSend);
   });
 });

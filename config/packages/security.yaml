@@ -20,6 +20,8 @@ security:
       form_login:
         login_path: auth_login
         check_path: auth_login
+      # login_throttling:
+      #   max_attempts: 3
       logout:
         path: auth_logout
         target: home
@@ -33,5 +35,7 @@ security:
   # Easy way to control access for large sections of your site
   # Note: Only the *first* access control that matches will be used
   access_control:
-    # - { path: ^/admin, roles: ROLE_ADMIN }
-    # - { path: ^/profile, roles: ROLE_USER }
+     - { path: ^/admin/wine/delete, roles: ROLE_ADMIN }
+     - { path: ^/admin/wine/get, roles: ROLE_USER }
+     - { path: ^/admin/wine/edit, roles: ROLE_USER }
+    #  - { path: ^/wines, roles: ROLE_USER }

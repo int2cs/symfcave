@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use Psr\EventDispatcher\EventDispatcherInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\AuthenticationEvents;
+use Symfony\Component\Security\Core\Event\AuthenticationEvent;
 
 class AuthController extends AbstractController
 {
@@ -13,7 +16,7 @@ class AuthController extends AbstractController
      */
     public function login()
     {
-        return $this->render('home.twig');
+        return $this->redirectToRoute('wines_list');
     }
 
     /**

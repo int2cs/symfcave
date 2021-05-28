@@ -2,6 +2,10 @@ body {
   padding-top: 72px;
   min-height: 100vh;
 }
+.navbar .infoUserConnected{
+  text-decoration: underline;
+  margin-right: 10px;
+}
 main {
   max-width: 1200px;
   margin: auto;
