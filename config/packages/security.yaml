@@ -24,7 +24,7 @@ security:
       #   max_attempts: 3
       logout:
         path: auth_logout
-        target: home
+        target: wines_list
 
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#firewalls-authentication
