@@ -34,7 +34,7 @@
 
 				{% if app.user %}
 					<div class="card-body">
-						<a href="{{path('wine_edit', {'id': product.id})}}" class="card-link btn btn-outline-warning">
+						<a id="btnEditWine" data-toggle="modal" data-target="#modalEditWine" data-id="{{product.id}}" class="card-link btn btn-outline-warning">
 							Editer
 						</a>
 						<a href="{{path('wine_delete', {'id': product.id})}}" class="card-link btn btn-outline-danger">

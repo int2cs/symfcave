@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Wines;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -76,13 +77,32 @@ class WinesController extends AbstractController
   }
 
   /**
+   * @Route("/wines/get/{id}", name="wine_get_info")
+   */
+  public function getInfo(Wines $product)
+  {
+    return $this->json($product, 200);
+  }
+  /**
    * @Route("/wines/edit/{id}", name="wine_edit")
    */
-  public function edit(Wines $product)
+  public function edit(Wines $product, Request $request)
   {
-    $this->addFlash('success', 'Modification effectué avec succès');
+    $entityManager = $this->getDoctrine()->getManager();
 
-    return new Response('Editing Bottle');
+    $product->setName($request->request->get('name'))
+      ->setCountry($request->request->get('country'))
+      ->setRegion($request->request->get('region'))
+      ->setMillesime($request->request->get('millesime'))
+      ->setCepages($request->request->get('cepages'))
+      ->setDescription($request->request->get('description'))
+      ->setPicture($request->request->get('formFile'));
+
+    $entityManager->persist($product);
+    $entityManager->flush();
+
+    $this->addFlash('success', 'Mise à jour éffectué avec succès.');
+    return $this->redirectToRoute('home');
   }
 
   /**
@@ -90,6 +110,8 @@ class WinesController extends AbstractController
    */
   public function delete(Wines $product)
   {
+    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+    
     $entityManager = $this->getDoctrine()->getManager();
 
     $entityManager->remove($product);
